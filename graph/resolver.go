@@ -4,4 +4,10 @@ package graph
 //
 // It serves as dependency injection for your app, add any dependencies you require here.
 
-type Resolver struct{}
+type Resolver struct {
+	healthCheck string
+}
+
+func NewResolver() *Resolver {
+	return &Resolver{healthCheck: "GraphQL Server is healthy!"}
+}

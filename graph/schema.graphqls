@@ -2,11 +2,17 @@
 #
 # https://gqlgen.com/getting-started/
 
-type User {
-  id: ID!
-  name: String!
+type Post {
+  userId: ID!
+  userName: String!
 }
 
 type Query {
-  hello: String!
+  health: String!
+  posts(jwt: String!): Post!
+}
+
+type Mutation {
+  Register(userName: String!, password: String!, isAdmin: Boolean!): Boolean!
+  Authenticate(password: String!, userId: ID!): Boolean!
 }

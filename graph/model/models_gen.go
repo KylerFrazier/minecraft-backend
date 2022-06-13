@@ -2,7 +2,7 @@
 
 package model
 
-type User struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+type Post struct {
+	UserID   string `json:"userId"`
+	UserName string `json:"userName"`
 }
